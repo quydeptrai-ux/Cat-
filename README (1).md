@@ -1,6 +1,6 @@
 local library = {
 			Version = "0.35",
-			WorkspaceName = "Switch Hub",
+			WorkspaceName = "Cat Hub",
 			flags = {},
 			signals = {},
 			objects = {},
