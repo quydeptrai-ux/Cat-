@@ -9,13 +9,10 @@ getgenv().RAM = { -- Log Des
     ['Enabled'] = false, 
     ['Delay'] = 600 
 }
-getgenv().Webhook = {
-   ["Enabled"] = true,
-   ["UrlWebhook"] = "Webhook Here",
-}
+
 getgenv().Setting = { -- Setting Script / ตั้งค่าสคริปต์
     ['FPS Booster'] = _G.Setting['FPS Booster'],
-    ['White Screen '] = true,
+    ['White Screen'] = true,
     ['Disible Gui'] = _G.Setting['Close Ui'],
     ['Lock Fruit'] = 1000000,
     ['AFK Check'] = 150,
@@ -660,12 +657,12 @@ if _G.cathub_Hub_Series_R then
 		
 		Yedhee.Name = "Yedhee"
 		Yedhee.Parent = ToggleFrameUi
-		Yedhee.BackgroundColor3 = Color3.fromRGB(175, 187, 230)
+		Yedhee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Yedhee.BackgroundTransparency = 1.000
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "cat (B)"
+		Yedhee.Text = "White Screen (B)"
 		Yedhee.TextColor3 = Color3.fromRGB(0, 255, 186) 
 		Yedhee.TextSize = 12.000
 		
