@@ -1,6 +1,6 @@
 local library = {
 			Version = "0.35",
-			WorkspaceName = "Cat Hub",
+			WorkspaceName = "cat Hub",
 			flags = {},
 			signals = {},
 			objects = {},
@@ -14,26 +14,26 @@ local library = {
 				easingStyle = Enum.EasingStyle.Quart,
 				easingDirection = Enum.EasingDirection.Out
 			},
-colors = {
-    main = Color3.fromRGB(175, 187, 230),
-    background = Color3.fromRGB(175, 187, 230),
-    outerBorder = Color3.fromRGB(175, 187, 230),
-    innerBorder = Color3.fromRGB(175, 187, 230),
-    topGradient = Color3.fromRGB(175, 187, 230),
-    bottomGradient = Color3.fromRGB(175, 187, 230),
-    sectionBackground = Color3.fromRGB(175, 187, 230),
-    section = Color3.fromRGB(175, 187, 230),
-    otherElementText = Color3.fromRGB(175, 187, 230),
-    elementText = Color3.fromRGB(175, 187, 230),
-    elementBorder = Color3.fromRGB(175, 187, 230),
-    selectedOption = Color3.fromRGB(175, 187, 230),
-    unselectedOption = Color3.fromRGB(175, 187, 230),
-    hoveredOptionTop = Color3.fromRGB(175, 187, 230),
-    unhoveredOptionTop = Color3.fromRGB(175, 187, 230),
-    hoveredOptionBottom = Color3.fromRGB(175, 187, 230),
-    unhoveredOptionBottom = Color3.fromRGB(175, 187, 230),
-    tabText = Color3.fromRGB(175, 187, 230)
-}
+			colors = {
+				main = Color3.fromHex('00D031'),--  FF0000
+				background = Color3.fromRGB(0, 0, 0),
+				outerBorder = Color3.fromRGB(0, 0, 0),
+				innerBorder = Color3.fromHex('007609'), --  280035
+				topGradient = Color3.fromRGB(0, 0, 0),
+				bottomGradient = Color3.fromHex('002D07'),
+				sectionBackground = Color3.fromHex('001C02'),
+				section = Color3.fromHex('00D030'), -- 
+				otherElementText = Color3.fromHex('00D030'), 
+				elementText = Color3.fromHex('BFBFBF'),
+				elementBorder = Color3.fromHex('006217'), -- 3C0062 1E0030
+				selectedOption = Color3.fromHex('003005'), -- 1E0030 3E0000
+				unselectedOption = Color3.fromHex('003005'),
+				hoveredOptionTop = Color3.fromHex('003005'),
+				unhoveredOptionTop = Color3.fromHex('003005'),
+				hoveredOptionBottom = Color3.fromHex('003005'),
+				unhoveredOptionBottom = Color3.fromHex('003005'),
+				tabText = Color3.fromHex('BFBFBF') -- 001919
+			},
 			gui_parent = (function()
 				local x, c = pcall(function()
 					return game:GetService("CoreGui")
