@@ -585,121 +585,32 @@ if _G.Switch_Hub_Series_R then
 		if game.CoreGui:FindFirstChild('SWP') then
 			game.CoreGui:FindFirstChild('SWP'):Destroy()
 		end
--- Đoạn mã cũ để tạo GUI
+local Luna = Instance.new("ScreenGui")
+local ToggleImgUi = Instance.new("ImageButton")
+local ToggleImgUiCorner = Instance.new("UICorner") -- Thêm UICorner mới cho ToggleImgUi
 
-local SkipGui = Instance.new("ScreenGui")
-local SkipFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local DropShadowHolder = Instance.new("Frame")
-local DropShadow = Instance.new("ImageLabel")
-local SkipButton = Instance.new("TextButton")
-local RuaImage = Instance.new("ImageLabel")
-local RuaTilte = Instance.new("TextLabel")
-local RuaContent = Instance.new("TextLabel")
+Luna.Name = "SWP"
+Luna.Parent = game.CoreGui
+Luna.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
--- Correct parenting
-local player = game.Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-SkipGui.DisplayOrder = 10
-SkipGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-SkipGui.Name = "SkipGui"
-SkipGui.Parent = playerGui -- Changed from CoreGui
+-- Cấu hình ToggleImgUi
+ToggleImgUi.Name = "ToggleImgUi"
+ToggleImgUi.Parent = Luna
+ToggleImgUi.Position = UDim2.new(0, 61, 0, 12)
+ToggleImgUi.Size = UDim2.new(0, 70, 0, 70) -- Đặt kích thước lớn hơn cho ToggleImgUi
+ToggleImgUi.Image = "rbxassetid://17425369757"
 
--- Rest of the script remains the same
+-- Thêm UICorner cho ToggleImgUi để làm cho nó thành hình tròn
+ToggleImgUiCorner.CornerRadius = UDim.new(0, 35) -- Đặt CornerRadius bằng nửa chiều rộng hoặc chiều cao của hình ảnh (70/2)
+ToggleImgUiCorner.Parent = ToggleImgUi
 
-SkipFrame.AnchorPoint = Vector2.new(0.5, 0)
-SkipFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-SkipFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SkipFrame.BorderSizePixel = 0
-SkipFrame.Position = UDim2.new(0.5, 0, 0, 50)
-SkipFrame.Size = UDim2.new(0, 185, 0, 50)
-SkipFrame.Name = "SkipFrame"
-SkipFrame.Parent = SkipGui
-
-UICorner.CornerRadius = UDim.new(0, 8)
-UICorner.Parent = SkipFrame
-
-DropShadowHolder.BackgroundTransparency = 1
-DropShadowHolder.BorderSizePixel = 0
-DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
-DropShadowHolder.ZIndex = 0
-DropShadowHolder.Name = "DropShadowHolder"
-DropShadowHolder.Parent = SkipFrame
-
-DropShadow.Image = "rbxassetid://6015897843"
-DropShadow.ImageColor3 = Color3.fromRGB(30, 30, 30)
-DropShadow.ImageTransparency = 0.5
-DropShadow.ScaleType = Enum.ScaleType.Slice
-DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
-DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
-DropShadow.BackgroundTransparency = 1
-DropShadow.BorderSizePixel = 0
-DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow.Size = UDim2.new(1, 47, 1, 47)
-DropShadow.ZIndex = 0
-DropShadow.Name = "DropShadow"
-DropShadow.Parent = DropShadowHolder
-
-SkipButton.Font = Enum.Font.SourceSans
-SkipButton.Text = ""
-SkipButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-SkipButton.TextSize = 14
-SkipButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SkipButton.BackgroundTransparency = 0.9990000128746033
-SkipButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SkipButton.BorderSizePixel = 0
-SkipButton.Size = UDim2.new(1, 0, 1, 0)
-SkipButton.Name = "SkipButton"
-SkipButton.Parent = SkipFrame
-
-RuaImage.Image = "rbxassetid://18900764695"
-RuaImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RuaImage.BackgroundTransparency = 0.9990000128746033
-RuaImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RuaImage.BorderSizePixel = 0
-RuaImage.Position = UDim2.new(0, 10, 0, 1)
-RuaImage.Size = UDim2.new(0, 40, 0, 40)
-RuaImage.Name = "RuaImage"
-RuaImage.Parent = SkipFrame
-
-RuaTilte.Font = Enum.Font.GothamBold
-RuaTilte.Text = "Rua Hup"
-RuaTilte.TextColor3 = Color3.fromRGB(131, 181, 255)
-RuaTilte.TextSize = 13
-RuaTilte.TextXAlignment = Enum.TextXAlignment.Left
-RuaTilte.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RuaTilte.BackgroundTransparency = 0.9990000128746033
-RuaTilte.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RuaTilte.BorderSizePixel = 0
-RuaTilte.Position = UDim2.new(0, 61, 0, 12)
-RuaTilte.Size = UDim2.new(1, -74, 0, 13)
-RuaTilte.Name = "RuaTilte"
-RuaTilte.Parent = SkipFrame
-
-RuaContent.Font = Enum.Font.GothamBold
-RuaContent.Text = "Click to skip target"
-RuaContent.TextColor3 = Color3.fromRGB(230, 230, 230)
-RuaContent.TextSize = 12
-RuaContent.TextTransparency = 0.7
-RuaContent.TextXAlignment = Enum.TextXAlignment.Left
-RuaContent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RuaContent.BackgroundTransparency = 0.9990000128746033
-RuaContent.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RuaContent.BorderSizePixel = 0
-RuaContent.Position = UDim2.new(0, 61, 0, 25)
-RuaContent.Size = UDim2.new(1, -74, 0, 11)
-RuaContent.Name = "RuaContent"
-RuaContent.Parent = SkipFrame
-
--- Đoạn mã mới được thêm vào
-
+-- Cấu hình sự kiện Click cho ToggleImgUi
 ToggleImgUi.MouseButton1Click:Connect(function()
     if togle_up then
         ToggleImgUi.ImageTransparency = 0.3
         uihide = true
         game:GetService("CoreGui")["Cat Hub"].Enabled = false
         game.Lighting.ExposureCompensation = 0
-        -- BlurCat.Size = 0
         togle_up = false
         wait()
         ToggleImgUi.ImageTransparency = 0
@@ -708,30 +619,30 @@ ToggleImgUi.MouseButton1Click:Connect(function()
         uihide = true
         game:GetService("CoreGui")["Cat Hub"].Enabled = true
         game.Lighting.ExposureCompensation = -10
-        -- BlurCat.Size = 80
         togle_up = true
         wait()
         ToggleImgUi.ImageTransparency = 0
     end
 end)
 
+-- Xóa 'Cat Hub C' nếu tồn tại
 if game.CoreGui:FindFirstChild('Cat Hub C') then
     game.CoreGui:FindFirstChild('Cat Hub C'):Destroy()
 end
 
+-- Hàm click mô phỏng
 local function click(a)
     game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X + a.AbsoluteSize.X / 2.5, a.AbsolutePosition.Y + 50, 0, true, a, 1)
     game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X + a.AbsoluteSize.X / 2.5, a.AbsolutePosition.Y + 50, 0, false, a, 1)
 end
 
+-- Hàm kiểm tra ảnh
 function CheckPhoto(vu)
     click(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.Sort)
     wait(.2)
     click(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.Sort.Dropdown[vu])
     wait(.2)
 end
-
--- Đoạn mã cũ tiếp tục nếu còn có thêm các thiết lập hoặc hàm khác
 		function Load_Info(Name_X,Folder)
 			local keep_all_name = {}
 			local kp = 0
