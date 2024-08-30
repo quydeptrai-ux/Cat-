@@ -794,51 +794,7 @@ if _G.Switch_Hub_Series_R then
 		local Status_Run = Start_S:AddLabel({
 			Name = ' Status : Farm Level'
 		})
-		
-		local Full_Moon_S = Start_S:AddLabel({
-			Name = ' 🌕 Full Moon : None.'
-			})
-		local Mirage_S = Start_S:AddLabel({
-			Name = ' 🌴 Mirage Island : None.'
-		})
-		spawn(function()
-			while wait(1) do
-				pcall(function()
-					if Three_World then
-						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 100%"))
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 75%"))
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 50%"))
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 25%"))
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 15%"))
-						else 
-							Full_Moon_S:Set(tostring(" 🌕 Full Moon : 0"))
-						end
-						if _G.Event['Pull Lever'] and game:GetService("Workspace").Map:FindFirstChild("MysticIsland") and Evo_Race_V3_H and not Pull_Lever_H and Quest_Dough_Awaken and Valkyrie_Helmet_H then
-							Mirage_S:Set(" 🌴 Mirage Island : ✅ Spawn ") 
-							local result = {}
-                            local x = tostring(game:GetService("Lighting").TimeOfDay)
-                            local regex = ("([^%s]+)"):format(":")
-                            for each in x:gmatch(regex) do
-								table.insert(result, each)
-							end
-							if tonumber(result[1]) >= 0 and tonumber(result[1]) < 5 or tonumber(result[1]) >= 18 and tonumber(result[1]) <= 23 then
-								List.Pull_Lerver = true
-							end
-						else
-							Mirage_S:Set(' 🌴 Mirage Island : None.')
-						end
-						wait(10)
-					else
-						wait(10)
-					end
-				end)
-			end
-		end)
+	
 	--
 	local Quest_S = General_T:CreateSection({
 	Name = " Quest ",
