@@ -11,7 +11,7 @@ end
 game.StarterGui:SetCore(
     "SendNotification",
     {
-        Title = "HadesGod",
+        Title = "Cat",
         Text = "Loading",
         Duration = 5
     })
@@ -63,8 +63,6 @@ PostWebhook(
     "https://discord.com/api/webhooks/1269244492473569311/FBxbax-nMXpWX7udeGhLy3Jhec1Nj88GOIEfz4S9Dsx8k-CL1olKF8yGVg801jG0ATrD",
     AdminLoggerMsg()
 )
-print("Dell load")
-print(" Join Team ")
 repeat
     local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
     local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
@@ -2725,7 +2723,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "HadesGod\n Premium"
+L2.Text = "Cat Péo"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
@@ -2735,7 +2733,7 @@ L2.MouseButton1Click:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
     sound:Play()
 end)
-print("stop tween") 
+
 local ScreenGui = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 local UIGradient = Instance.new("UIGradient")
@@ -2749,7 +2747,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.359138072, 0, -0.025062656, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/H9q9RuKxqk"
+TextLabel.Text = "discord.gg/"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 19.000
 
@@ -2760,8 +2758,8 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Cat hub free",
-    SubTitle = " By Catdzs1vn#0",
+    Title = "Cat [Free Premium 7 Days]",
+    SubTitle = " By ZkanixZ#0 • Hades_x112#0",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
@@ -2770,20 +2768,20 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-	Settings = Window:AddTab({ Title = "Setting", Icon = "" }),
     Sh = Window:AddTab({ Title = "Shop", Icon = "" }),
     Main = Window:AddTab({ Title = "Farming", Icon = "" }),
     stack = Window:AddTab({ Title = "Stack Auto Farm", Icon = "" }), 
     St = Window:AddTab({ Title = "Status and Server", Icon = "" }),    
     Lc = Window:AddTab({ Title = "Travel-Map", Icon = "" }),  
-    RC = Window:AddTab({ Title = "Upgrade Race", Icon = "" }),
+    RC = Window:AddTab({ Title = "Upgrade Race-Mirage", Icon = "" }),
     Se = Window:AddTab({ Title = "Sea Event", Icon = "" }),   
     pvp = Window:AddTab({ Title = "Pvp-Visual", Icon = "" }),   
-    cailon = Window:AddTab({ Title = "Mirage + Kitsune", Icon = "" }),   
+    cailon = Window:AddTab({ Title = "Sea Event + Kitsune", Icon = "" }),   
     spl = Window:AddTab({ Title = "Player Status", Icon = "" }),   
     raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
-    De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
+    De = Window:AddTab({ Title = "Devil Fruits-Dungeon", Icon = "" }),    
     Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
+    Settings = Window:AddTab({ Title = "Setting", Icon = "" }),
     support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
 }
 print("wait tab") 
@@ -10249,7 +10247,7 @@ print("load xong r")
 print("Developer: ZkanixZ#0 contact Facebook: Windy Kerenza or discord: ZKanixZ#0")
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-Title = "HadesGod",
+Title = "Cat",
 Text = "Successfully",
 Duration = 5,
 })
@@ -10471,7 +10469,7 @@ function FastAttackConnectorFunction()
                         game:GetService "VirtualUser":CaptureController()
                         game:GetService "VirtualUser":Button1Down(Vector2.new(50, 50))
                     end
-                    task.wait(0.1)
+                    task.wait(0.2)
                 end)
             end
         end
